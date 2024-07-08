@@ -5,11 +5,21 @@ This creates some simple python scripts to help hit the expected endpoints, whet
 
 
 This repository is a simple python repository to demonstrate how to:
-a. Crack bad passwords using 2 obvious techniques.
-b. Generate a strong(ish) password in python
+
+* Crack bad passwords using 2 obvious techniques.
+* Generate a strong(ish) password in python
 
 ## Requirements
-## Setup
+This has been tested on `Python 3.8.10` other version may or may not work.
+
+
+## Setup 
+
+This application can be done either locally using Python or via the internet.
+### Replit
+This app can be run on replit [here](https://replit.com/@ppratt1/password-exercise-helper).
+
+### Locally
 ```sh
 python3 -m venv password-helper
 source password-helper/bin/activate
@@ -27,6 +37,8 @@ BASE_URL = "http://localhost:5000"
 If you are running the [flask app](https://github.com/pratt13/password-flask-app) locally then you do not need to change it.
 If you are using the flask app on replit, you will need to change this to the address replit provides the flask app.
 
+
+##
 ## The tasks
 
 First thing to do is just ro run it
