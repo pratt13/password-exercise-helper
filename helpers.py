@@ -5,7 +5,9 @@ def iter_test(url, user, generator, num_attempts=1000):
     count = 0
     success = False
     solver = (guess for guess in generator())
+    # Declare these to avoid linting issues
     secret_info = None
+    password = None
     print(f"Task: Attempting to hack into {url}")
     while count < num_attempts:
         password = next(solver)
