@@ -11,8 +11,8 @@ BASE_URL = "http://localhost:5000"
 
 # Uncomment and recomment each task when required
 iter_test(f"{BASE_URL}/task1/boyles_secret", "boyle", boyles_task)
-# Maximum number of possible combos is 6 * 14 * 14 = 1176
-# iter_test(f"{BASE_URL}/task1/terrys_secret", "terry", terrys_task, num_attempts=1176)
+# Maximum number of possible combos is 6 * 15 * 15 = 1350
+# iter_test(f"{BASE_URL}/task1/terrys_secret", "terry", terrys_task, num_attempts=1350)
 # single_post(f"{BASE_URL}/task2/level_one_a", generate_password)
 # single_post(f"{BASE_URL}/task2/level_one_b", generate_password)
 # single_post(f"{BASE_URL}/task2/level_one_c", generate_password)
