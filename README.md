@@ -16,8 +16,11 @@ This has been tested on `Python 3.8.10` other version may or may not work.
 ## Setup 
 
 This application can be done either locally using Python or via the internet.
+This repository is to be used in conjunction with [password-flask-app](https://github.com/pratt13/password-flask-app); without it this repository doesn't do much.
+
 ### Replit
 This app can be run on replit [here](https://replit.com/@ppratt1/password-exercise-helper).
+
 
 ### Locally
 ```sh
@@ -26,19 +29,18 @@ source password-helper/bin/activate
 pip3 install -r requirements.txt
 ```
 
-In main there is a section
+If you are running the [flask app](https://github.com/pratt13/password-flask-app) locally then you do not need to change the URL in `main.py`.
+
+### Configuration
+In `main.py` there is a section
 
 ```py
 # Add the URL here you want to hack
 # One time URL - change once during the exercise
 BASE_URL = "http://localhost:5000"
 ```
+For the flask app hosted on Replit you will need to change this to the address Replit provides the flask app.
 
-If you are running the [flask app](https://github.com/pratt13/password-flask-app) locally then you do not need to change it.
-If you are using the flask app on replit, you will need to change this to the address replit provides the flask app.
-
-
-##
 ## The tasks
 
 First thing to do is just ro run it
@@ -57,8 +59,9 @@ Eventually or the task should be uncommented and you can crack both `boyle's` an
 
 
 ## Tasks
-Summary of tasks are below, but the flask app has far more information of you navigate to it.
-Locally, if run it will be on `localhost:5000` or on replit it will be the URL given.
+Summary of the tasks are below, but the flask app has far more information if you navigate to it.
+If the flask app is run locally as described it will be on `localhost:5000` or on replit it will be the URL given.
+
 ### Task 1
 #### Boyle's Task
 
@@ -80,9 +83,3 @@ It must have:
 * Range of characters, not all the letter `a1a2a3a4`
 * All characters are randomly and uniformly chosen.
 
-## Testing
-### Unit tests
-
-```sh
-python3 -m unittest
-```
